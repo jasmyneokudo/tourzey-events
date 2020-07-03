@@ -1,0 +1,28 @@
+[
+
+    {
+        "id":0,
+        "question":"How do you partner together with the locals for events?",
+        "answer":"How do you partner together with the locals for events?"
+    },
+    {
+        "id":1,
+        "question":"Is there a minimum or maximum order?",
+        "answer":"Is there a minimum or maximum order?"
+    },
+    {
+        "id":2,
+        "question":"How far in advance can orders be placed?",
+        "answer":"How far in advance can orders be placed?"
+    },
+    {
+        "id":3,
+        "question":"Do you accommodate restrictions?",
+        "answer":"Do you accommodate restrictions?"
+    },
+    {
+        "id":4,
+        "question":"What is your cancellation policy?",
+        "answer":"What is your cancellation policy?"
+    }
+]

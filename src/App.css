@@ -1,0 +1,14 @@
+.App {
+  text-align: center;
+
+  flex-direction: column;
+  display: flex;
+  font-family: proxima-nova-light, sans-serif;
+font-style: normal;
+font-weight: 300;
+
+}
+
+* {
+  box-sizing: border-box;
+}

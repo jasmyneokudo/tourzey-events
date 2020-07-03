@@ -1,0 +1,104 @@
+.faqs{
+    display: flex;
+    // align-items: center;
+    width: 100%;
+    flex-direction: column;
+
+
+    .title{
+
+        margin-top: 80px;
+        font-size: 32px;
+        font-weight: 300;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        text-align: center;
+
+
+    }
+
+    .list{
+        display: flex;
+        width: 50%;
+        align-self: center;
+        padding: 20px 0px;
+        flex-direction: column;
+
+
+        .faq{
+            display: flex;
+            // height: 80px;
+            // background-color: red;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            
+
+            
+            .question{
+                font-size: 18px;
+                font-weight: normal;
+                font-stretch: normal;
+                font-style: normal;
+                line-height: 1.44;
+                letter-spacing: 1px;
+
+            }
+
+
+            .open{
+                // margin-top: 20px;
+                cursor: pointer;
+            }
+
+           
+        }
+
+        .drop-down{
+            display: flex;
+            // height: 80px;
+            // background-color: red;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+
+            .desc{
+                font-size: 14px;
+                font-weight: normal;
+                font-stretch: normal;
+                font-style: normal;
+                line-height: normal;
+                letter-spacing: normal;
+                color: #757575;
+            }
+
+        }
+
+        hr{
+                width: 100%;
+
+        }
+        .footer{
+
+            display: flex;
+            position: relative;
+            align-items: flex-start;
+            background-color: white;
+            font-size: 11px;
+            cursor: pointer;
+            font-weight: normal;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: normal;
+            letter-spacing: 1px;
+            text-align: left;
+            color: #e31f3d;
+            
+    
+        }
+    }
+
+    
+}

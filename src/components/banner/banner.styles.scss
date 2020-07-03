@@ -1,0 +1,94 @@
+.banner{
+    // background: url("/images/hero-header@2x.png")  no-repeat;
+    width: 100%;
+    display: flex;
+    flex-direction: inherit;
+    align-items: center;
+    justify-content: center;
+
+    .inner{
+        width: 100%;
+        z-index: 9;
+        display: flex;
+        flex-direction: inherit;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .react-calendar{
+        position: absolute;
+        box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.08);
+        border-top: 5px solid #e31f3d;
+        border-left: solid 0.5px #e2e2e2;
+        border-right: solid 0.5px #e2e2e2;
+        border-bottom: solid 0.5px #e2e2e2;
+        background-color: #ffffff;
+        top: 635px;
+        right: 460px;
+        z-index: 10;
+
+        .react-calendar__tile--now {
+            border: solid 2px #e31f3d;
+            border-radius: 50%;
+            background-color: #ffffff;
+
+          }
+
+          .react-calendar__tile--active {
+            background: #ffffff;
+            border: solid 2px black;
+            border-radius: 50%;
+            color: black;
+            
+          }
+    }
+
+    .banner-details{
+        background-color: #ffffff;
+        width: 50%;
+        position: absolute;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        // z-index: 10;
+        bottom: 100px;
+        padding: 20px;
+        
+
+        p{
+        
+            font-family: proxima-nova, sans-serif;
+            font-size: 36px;
+            font-weight: lighter;
+            text-align: left;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.11;
+            letter-spacing: normal;
+            color: #000000;
+        }
+
+        .form{
+            padding-left: 10px;
+            height: 50px;
+            flex-shrink: inherit;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.08);
+            border: solid 0.5px #e2e2e2;
+            background-color: #ffffff;
+
+            .search-btn{
+                height: 50px;
+                width: 80px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+
+    }
+
+   
+}

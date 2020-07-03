@@ -1,0 +1,257 @@
+.container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    
+
+    .header{
+        
+        margin-top: 50px;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+
+        
+        .title{
+
+            font-size: 32px;
+            font-weight: 300;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            text-align: center;
+            color: #000000;
+
+        }
+
+        .desc{
+            margin-top: -20px;
+            font-size: 12px;
+            font-weight: normal;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 2;
+            letter-spacing: 1px;
+            text-align: center;
+            color: #000000;
+
+        }
+    }
+
+    .featured-events{
+
+        width: 90%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        
+        .bullet{
+            opacity: 0;
+            background-color: red;
+        }
+        
+    
+        .swiper-container {
+            width: 100%;
+            height:500px;
+
+           
+        
+            .swiper-wrapper{
+    
+                padding: 40px 0px;
+    
+                .swiper-slide {
+                    text-align: center;
+                    font-size: 18px;
+                    background: #fff;
+                    width: 100%;
+                    height: 100%;
+                
+                    /* Center slide text vertically */
+                    // display: -webkit-box;
+                    // display: -ms-flexbox;
+                    // display: -webkit-flex;
+                    // display: flex;
+                    // -webkit-box-pack: center;
+                    // -ms-flex-pack: center;
+                    // -webkit-justify-content: center;
+                    // justify-content: center;
+                    // -webkit-box-align: center;
+                    // -ms-flex-align: center;
+                    // -webkit-align-items: center;
+                    // align-items: center;
+    
+                    .event{
+                        
+                        margin: 20px 10px;
+                        width: 90%;
+                        border: solid 0.5px #e2e2e2;
+                        // height: 100%;
+                        background-color: #ffffff;
+    
+                        img{
+                            width: 100%;
+                        }
+                        .details{
+                            
+
+                            display: flex;
+                            // width: 80%;
+                            flex-direction: column;
+                            align-items: flex-start;
+                            padding: 10px 10px;
+                            
+                            .title{
+                                font-size: 14px;
+                                font-weight: 600;
+                                font-stretch: normal;
+                                font-style: normal;
+                                line-height: normal;
+                                letter-spacing: 1px;
+                                color: #000000;
+        
+                            }
+        
+                            .state{
+                                
+                                margin-top: -10px;
+                                font-size: 12px;
+                                font-weight: normal;
+                                font-stretch: normal;
+                                font-style: normal;
+                                line-height: 1.5;
+                                letter-spacing: 1px;
+                                color: #757575;
+                            }
+        
+                            .desc{
+                                font-size: 12px;
+                                // height: 54px;
+                                font-weight: 300;
+                                font-stretch: normal;
+                                font-style: normal;
+                                line-height: 1.5;
+                                text-align: left;
+                                letter-spacing: 1px;
+                                color: #000000;
+        
+                            }
+    
+                        }
+    
+                            .footer{
+                                display: flex;
+                                flex-direction: column;
+                                align-items: flex-start;
+                                border: solid 0.5px #e2e2e2;
+                                width: 100%;
+                                // height: 100%;
+                                padding: 0px 10px;
+                                justify-content: space-between;
+                                background-color: #f4f5f7;
+    
+                                .amount{
+    
+                                    margin-top: -20px;
+                                    font-size: 20px;
+                                    font-weight: 300;
+                                    font-stretch: normal;
+                                    font-style: normal;
+                                    line-height: normal;
+                                    letter-spacing: normal;
+                                    text-align: right;
+                                    color: #000000;
+            
+                                }
+            
+                                .per-person{
+            
+                                    font-size: 11px;
+                                    font-weight: 300;
+                                    font-stretch: normal;
+                                    font-style: normal;
+                                    line-height: normal;
+                                    letter-spacing: 1px;
+                                    color: #000000;
+                                  }
+            
+                                  .others{
+            
+                                        margin-top: -10px;
+                                        font-size: 11px;
+                                        font-weight: 300;
+                                        font-stretch: normal;
+                                        font-style: normal;
+                                        line-height: normal;
+                                        letter-spacing: 1px;
+                                        color: #000000;
+                                      
+                                      
+                                  }
+    
+                            }
+                        }
+                    
+    
+                  }
+    
+            }
+           
+    
+              
+          }
+    
+          .swiper-button-right{
+                
+            right: 10px;
+            left: auto;
+            padding: 10px;
+            width: 50px;
+            height: 50px;
+            background-size: contain;
+            background-image: none;
+            background-image: url("/images/right-side3.png");
+            border-radius: 25px;
+            margin: 0px 10px;
+            top: 50%;
+            // margin-top: 20px;
+            z-index: 10;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+    
+          .swiper-button-left{
+            
+            left: 10px;
+            right: auto;
+            padding: 10px;
+            width: 50px;
+            height: 50px;
+            background-size: contain;
+            margin: 0px 10px;
+            background-image: url("/images/left-side3.png");
+            border-radius: 25px;
+    
+            top: 50%;
+            // margin-top: 20px;
+            z-index: 10;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+    
+    
+    
+    }
+    
+    
+    
+      
+}

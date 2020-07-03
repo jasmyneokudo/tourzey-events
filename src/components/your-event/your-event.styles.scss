@@ -1,0 +1,65 @@
+.your-event{
+
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: #ededed;
+
+    .title{
+        margin-top: 70px;
+        margin-bottom: 50px;
+        font-size: 12px;
+        font-weight: 600;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: 2px;
+        text-align: center;
+
+    }
+
+
+    .items{
+
+        flex-wrap: wrap;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        
+
+        .item{
+
+            display: flex;
+            margin: 40px 40px;
+            flex-direction: column;
+            align-items: flex-start;
+
+
+            .title{
+
+                margin-top: 25px;
+                margin-bottom: -10px;
+                font-size: 16px;
+                font-weight: 600;
+                font-stretch: normal;
+                font-style: normal;
+                line-height: 1.38;
+                letter-spacing: normal;
+
+            }
+
+            .desc{
+
+                text-align: left;
+                width: 229px;
+                font-size: 16px;
+                font-weight: normal;
+                font-stretch: normal;
+                font-style: normal;
+                line-height: 1.5;
+                letter-spacing: normal;
+
+            }
+        }
+    }
+}
