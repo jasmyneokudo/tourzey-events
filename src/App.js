@@ -1,10 +1,13 @@
 import React from 'react';
-import './App.css';
+
 import HomePage from './pages/home/home.component';
+
+import './App.css';
 
 const App = () =>  {
   return (
     <div className="App">
+      {/* <GlobalStyles/> */}
       <HomePage/>
     </div>
   );

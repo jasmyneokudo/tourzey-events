@@ -1,3 +1,5 @@
+
+
 .banner{
     // background: url("/images/hero-header@2x.png")  no-repeat;
     width: 100%;
@@ -13,7 +15,17 @@
         flex-direction: inherit;
         align-items: center;
         justify-content: center;
+
+        .image{
+            
+            background-size: contain;
+            background-position: center;
+          
+           
+        }
     }
+
+    
 
     .react-calendar{
         position: absolute;
@@ -51,7 +63,7 @@
         flex-wrap: wrap;
         flex-direction: column;
         // z-index: 10;
-        bottom: 100px;
+        // bottom: 6px;
         padding: 20px;
         
 
@@ -92,3 +104,83 @@
 
    
 }
+
+@media screen and (max-width: 800px) {
+
+    .banner{
+
+        width: 100%;
+        display: flex;
+        flex-direction: inherit;
+        align-items: center;
+        justify-content: center;
+
+     .inner{
+
+        width: 100%;
+        z-index: 9;
+        display: flex;
+        flex-direction: inherit;
+        align-items: center;
+        justify-content: center;
+
+        .image{
+
+            
+            background-size: contain;
+            background-position: center;
+           
+        }
+
+    .banner-details{
+        background-color: #ffffff;
+        width: 50%;
+        position: absolute;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        // z-index: 10;
+        bottom: 25px;
+        padding: 20px;
+        
+        
+        }
+
+        p{
+        
+            // margin-top: -6px;
+            font-family: proxima-nova, sans-serif;
+            font-size: 25px;
+            font-weight: lighter;
+            text-align: left;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.11;
+            letter-spacing: normal;
+            color: #000000;
+        }
+
+        .form{
+            padding-left: 10px;
+            height: 50px;
+            flex-shrink: inherit;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.08);
+            border: solid 0.5px #e2e2e2;
+            background-color: #ffffff;
+
+            .search-btn{
+                height: 50px;
+                width: 80px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+
+    }
+   
+    }
+   }

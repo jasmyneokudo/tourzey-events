@@ -72,7 +72,7 @@ render(){
         }}
         
         className='inner'>
-        <img style={{
+        <img className='image' style={{
             zIndex:-1,
             height: '600px',
             // position:'absolute',

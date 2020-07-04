@@ -4,8 +4,24 @@
   flex-direction: column;
   display: flex;
   font-family: proxima-nova-light, sans-serif;
-font-style: normal;
-font-weight: 300;
+  font-style: normal;
+  font-weight: 300;
+
+}
+
+/* 
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+} */
+
+@media screen and (max-width: 800px) {
+
+ .App{
+  padding: 0px;
+  /* margin-right:-100px; */
+ } 
 
 }
 
