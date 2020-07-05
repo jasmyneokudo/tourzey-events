@@ -12,7 +12,6 @@ import './faqs.styles.scss';
 class Faqs extends React.Component {
 
 
-
     renderDescription(id, question){
 
         const {selected} = this.props;
@@ -26,6 +25,8 @@ class Faqs extends React.Component {
                     <p className='desc'>{question}</p>
                 </div>
             );
+        }else{
+            return (null);
         }
     }//0074610597
 
@@ -33,7 +34,7 @@ class Faqs extends React.Component {
 
         if (id === this.props.selected){
             return(
-                <Close className='open' onClick={() => this.props.selectItem(id)}/>
+                <Close className='open' onClick={() => this.props.selectItem(null)}/>
                                     
             )
         }else{

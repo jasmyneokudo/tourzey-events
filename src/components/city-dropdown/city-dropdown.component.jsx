@@ -4,6 +4,8 @@ import './city-dropdown.styles.scss';
 import { connect } from 'react-redux';
 import {ReactComponent as Open} from '../../assets/triangle1.svg';
 
+import {ReactComponent as Close} from '../../assets/triangle2.svg';
+
 import * as actions from '../../actions';
 
 class CityDropdown extends React.Component {
@@ -19,14 +21,36 @@ class CityDropdown extends React.Component {
 
                 <div className='drop-down'>
                    { 
-                    states.map( ({name}) => (
-                        <p className='state'>{name}</p>
+                        states.map( ({name}) => (
+                            <p className='state'>{name}</p>
 
-                    ))
+                        ))
                     }
                 </div>
             );
+        }else{
+            return null;
         }
+    }
+
+    renderArrow(name){
+
+        if (name === this.props.selectedCountry ){
+
+            return(
+                <Close style={{cursor:'pointer'}} 
+                onClick={() => this.props.selectCountry(null)}/>
+            )
+        }else{
+            return(
+
+                <Open style={{cursor:'pointer'}} 
+                onClick={() => this.props.selectCountry(name)}/>
+                                   
+            );
+
+        }
+        
     }
 
     render(){
@@ -39,8 +63,10 @@ class CityDropdown extends React.Component {
                     this.props.countries.map( ({name, states}) => (
                         <div>
                             <div className='item'>
-                                <Open style={{cursor:'pointer'}} onClick={() => this.props.selectCountry(name)}/>
-                                <p className='country'>{name}</p>
+                                {
+                                    this.renderArrow(name)
+                                }
+                                 <p className='country'>{name}</p>
                             </div>
 
                             {
