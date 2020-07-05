@@ -74,9 +74,9 @@ render(){
         className='inner'>
         <img className='image' style={{
             zIndex:-1,
-            height: '600px',
+            
             // position:'absolute',
-            width:'100%',
+            
             backgroundSize:'contain'
         }} src='/images/hero-header@2x.png'/>
 
@@ -99,7 +99,7 @@ render(){
             }
         }}
         hint='Event Type' width='60%' svg={<EventLogo className='logo'/>}/>
-        <p style={{marginTop:-1, color:'#e2e2e2', marginRight:10, position:'relative', top:5}}>&#x2758;</p>
+        <span >&#x2758;</span>
         <CustomInput hint='City'
         onClick={ ()=> {
         
@@ -110,7 +110,7 @@ render(){
             }
         }}
         width='20%'  svg={<CityLogo className='logo'/>}/>
-        <p style={{marginTop:-1, color:'#e2e2e2', marginRight:10, position:'relative', top:5}}>&#x2758;</p>
+        <span>&#x2758;</span>
         
         <CustomInput
         onClick={ ()=> {
@@ -122,7 +122,7 @@ render(){
             }
         }}
         hint='Guest Size'  width='20%' svg={<GuestLogo className='logo'/>}/>
-        <p style={{marginTop:-1, color:'#e2e2e2', marginRight:10, position:'relative', top:5}}>&#x2758;</p>
+        <span >&#x2758;</span>
         
         <CustomInput 
          onClick={ ()=> {

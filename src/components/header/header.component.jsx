@@ -10,11 +10,11 @@ const Header = () => (
         <AppLogo className='app-logo'/>
 
         <div className='options'>
-            <h3>Available Cities</h3>
-            <h3>About Us</h3>
-            <h3>|</h3>
-            <h3>Help</h3>
-            <h3>Account</h3>
+            <p>Available Cities</p>
+            <p>About Us</p>
+            <p>|</p>
+            <p>Help</p>
+            <p>Account</p>
         </div>
         
 

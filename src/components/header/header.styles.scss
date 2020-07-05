@@ -24,7 +24,7 @@
         align-items: center;
         justify-content: flex-end;
 
-        h3{
+        p{
             
            padding: 10px 15px;
             font-family: proxima-nova, sans-serif;;
@@ -38,4 +38,55 @@
         }
     }
     
+}
+
+
+@media screen and (max-width: 500px) {
+
+
+    .header{
+
+        height: 100px;
+        width: 100%;
+        padding: 0px 10px;
+        display: flex;
+        align-items: center;
+        margin-bottom: 25px;
+        display: flex;
+        justify-content: space-between;
+        position: fixed;
+    
+        .app-logo{
+            width: 30%;
+            height: 30px;   
+            margin-bottom: 20px;
+            margin-left: 10px;
+        }
+    
+        .options{
+            width: 60%;
+            height: 100%;
+            display: flex;
+            cursor: pointer;
+            align-items: center;
+            justify-content: flex-end;
+    
+            p{
+                
+               padding: 0px 5px;
+                font-family: proxima-nova, sans-serif;;
+                font-size: 10px;
+                font-weight: normal;
+                font-stretch: normal;
+                font-style: normal;
+                line-height: normal;
+                letter-spacing: 1px;
+        
+            }
+        }
+        
+    }
+    
+    
+
 }

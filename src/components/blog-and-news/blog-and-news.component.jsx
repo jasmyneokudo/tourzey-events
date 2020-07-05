@@ -18,7 +18,7 @@ const BlogAndNews = () => (
             <div 
             className='background-image'
             style={{
-                background: 'url(/images/restaurant-room.png)',
+                background: 'url(/images/restaurant-room.png) repeat-x' ,
                 backgrouundSize:'contain',
                 backgroundPosition:'center'
             }}/>

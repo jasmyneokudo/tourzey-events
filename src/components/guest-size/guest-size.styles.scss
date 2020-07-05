@@ -35,3 +35,94 @@
         }
     }
 }
+
+@media screen and (max-width: 800px) and (min-width: 501px){
+
+
+
+    .guest-size{
+
+        position: absolute;
+        display: flex;
+        width: 152px;
+        height: 282px;
+        background-color: #ffffff;
+        flex-direction: column;
+        border-top: 5px solid;
+        border-color: #e31f3d;
+        height: fit-content;
+        justify-content: center;
+        z-index: 10;
+        box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.08);
+        top: 620px;
+        right: 260px;
+    
+        .name{
+            font-size: 16px;
+            font-weight: normal;
+            font-stretch: normal;
+            font-style: normal;
+            padding: 8px 8px;
+            cursor: pointer;
+            line-height: normal;
+            letter-spacing: 1px;
+            text-align: left;
+            background-color: white;
+    
+            &:hover{
+                // opacity: 0.08;
+                // color: black;
+                background-color: #FCEDEF;
+    
+            }
+        }
+    }
+    
+
+}
+
+
+@media screen and (max-width: 500px) {
+
+
+
+    .guest-size{
+
+        position: absolute;
+        display: flex;
+        width: 120px;
+        height: 282px;
+        background-color: #ffffff;
+        flex-direction: column;
+        border-top: 5px solid;
+        border-color: #e31f3d;
+        height: fit-content;
+        justify-content: center;
+        z-index: 10;
+        box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.08);
+        top: 450px;
+        right: 100px;
+    
+        .name{
+            font-size: 14px;
+            font-weight: normal;
+            font-stretch: normal;
+            font-style: normal;
+            padding: 8px 8px;
+            cursor: pointer;
+            line-height: normal;
+            letter-spacing: 1px;
+            text-align: left;
+            background-color: white;
+    
+            &:hover{
+                // opacity: 0.08;
+                // color: black;
+                background-color: #FCEDEF;
+    
+            }
+        }
+    }
+
+
+}

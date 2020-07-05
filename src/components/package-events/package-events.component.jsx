@@ -12,30 +12,12 @@ const PackageEvents = () => (
 
     <div className='package-events'>
 
-        <p style={{
-            fontSize: '32px',
-            fontWeight: 'lighter',
-            fontStretch: 'normal',
-            fontStyle: 'normal',
-            lineHeight: 'normal',
-            
-            letterSpacing: 'normal',
-            textAlign: 'center'
-        }}>
+        <p className='title'>
             Our package events to choose from
 
         </p>
 
-        <p style={{
-            fontSize: '12px',
-            fontWeight: 'lighter',
-            fontStretch: 'normal',
-            fontStyle: 'normal',
-            lineHeight: 1.67,
-            lineBreak:"loose",
-            letterSpacing: '1px',
-            textAlign: 'center'
-        }}>
+        <p className='desc'>
            THE TYPE OF EVENT THAT WILL WOW YOUR TEAM AND KEEP THEM <br/>
 ENGAGED AND PROMOTES LOYALTY
 

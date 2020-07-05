@@ -15,12 +15,14 @@ const Stay = () => (
         <div className='content'>
 
             <div style={{
-                backgroundColor:'white'
+                display:'flex',
+                flexDirection: 'row',
+                backgroundColor:'white',
+                alignItems:'center',
+                width:'70%'
             }}>
 
-                <Mail style={{
-                    margin:'0px 20px'
-                }} />
+                <Mail className='mail'/>
                 <input
                 placeholder='Your Email Address' />
             </div>

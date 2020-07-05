@@ -112,7 +112,7 @@
     }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 800px) and (min-width: 501px) {
 
     .procedures{
 
@@ -234,3 +234,125 @@
 
 }
 
+@media screen and (max-width: 500px) { 
+
+
+    .procedures{
+
+
+        background-image: linear-gradient( #ffffff, #f4f5f7);
+        display: flex;
+        width: 100%;
+        align-items: center;
+        flex-direction: column;
+    
+        .title{
+            font-size: 12px;
+            font-weight: 600;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: normal;
+            letter-spacing: 2px;
+            text-align: center;
+            color: #000000;
+    
+    
+        }
+        .desc{
+    
+            font-size: 18px;
+            font-weight: 300;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.44;
+            letter-spacing: 1px;
+            text-align: center;
+            color: #000000;
+    
+    
+        }
+    
+        .procedure{
+            width: 100%;
+            display: flex;
+            // flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            // justify-content: space-around;
+            
+    
+            img{
+                margin: 50px 0px;
+                width: 40%;
+            }
+    
+    
+    
+            div{
+                width: 50%;
+                display: flex;
+                flex-direction: column;
+                margin: 20px 20px;
+                justify-content: center;
+                align-items: flex-start;
+    
+                
+    
+                .title{
+                    
+    
+                    .index{
+                        font-size: 14px;
+                        font-weight: bold;
+                        font-stretch: normal;
+                        font-style: normal;
+                        line-height: normal;
+                        letter-spacing: normal;
+                        text-align: right;
+                    }
+    
+                    .name{
+    
+                        font-size: 18px;
+                        font-weight: normal;
+                        font-stretch: normal;
+                        font-style: normal;
+                        line-height: normal;
+                        letter-spacing: normal;
+                        padding-left: 10px;
+    
+                    }
+                }
+    
+                .desc{
+                    font-size: 12px;
+                    width: 200px;
+                    font-weight: 300;
+                    font-stretch: normal;
+                    font-style: normal;
+                    line-height: 1.5;
+                    letter-spacing: normal;
+                    text-align: left;
+                }
+                .btn{
+                    padding: 0px 30px;
+                    height: 40px;
+                    background-color: #e31f3d;
+                    color: white;
+                    border: none;
+                    font-size: 12px;
+                    font-weight: normal;
+                    font-stretch: normal;
+                    font-style: normal;
+                    line-height: normal;
+                    letter-spacing: 1px;
+                    text-align: center;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+    
+
+
+}
