@@ -6,15 +6,16 @@ const PackageEventsProcedures = () => (
 
     <div className='procedures'>
 
-        <p className='title'>how Tourzey event works?</p>
+        <p className='title'>HOW TOURZEY EVENT WORKS</p>
         <p className='desc'>It’s as easy as specifying your event, customize it and then order.</p>
         <div className='procedure'>
 
-            <img src='/images/choose-events.png' />
+            <img src='/images/choose-events2.png' />
 
             <div>
 
-                <p className='title'><text className='index'>1.   </text><text className='name'> Choose your event</text></p>
+                <p className='title'><text className='index'>1.  
+                 </text><text className='name'> Choose your event</text></p>
                 <p className='desc'>Ready to start your special event? Simply use the 
                     search bar to select the type of event, location, 
                     date and the expected number of guests.</p>
@@ -28,27 +29,29 @@ const PackageEventsProcedures = () => (
 
             <div>
 
-                <p className='title'><text className='index'>2.
-                   </text><text className='name'> Customize event package</text></p>
+                <p className='title'>
+                    <span className='index'>2.</span>
+                    <span className='name'> Customize event package</span>
+                 </p>
                 <p className='desc'>Add mood to your event such as family, formal, 
                 adventure, and more details to personalize 
                 your event.</p>
                 <p style={{
                     fontSize:'11px',
                     letterSpacing:'1px',
-                    color:'red',
+                    color:'#e31f3d',
                     cursor:'pointer'
                     
 
                 }}>  SEE LIST OF PACKAGES <Arrow/> </p>
             </div>
-            <img src='/images/cutsomisation.png' />
+            <img src='/images/cutsomisation2.png' />
         {/* &#x2190; */}
         </div>
         
         <div className='procedure'>
 
-            <img src='/images/place-order.png' />
+            <img src='/images/place-order2.png' />
 
             <div>
 

@@ -21,7 +21,6 @@ const HomePage = () => (
     <div className='homepage'>
 
          <Header/>
-         <div style={{height:100}}></div>
          <Banner/>
          <BannerFooter/>
          <PackageEvents/>

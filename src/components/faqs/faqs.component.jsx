@@ -75,7 +75,7 @@ class Faqs extends React.Component {
                                 {
                                     this.renderDescription(id, question)
                                 }
-                                <hr />
+                                <hr style={{opacity: '0.3'}} />
                              </div>
                         ))
                     }

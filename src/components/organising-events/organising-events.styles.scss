@@ -6,7 +6,9 @@
 
     .title{
         font-size: 12px;
+        font-family: ProximaNova;
         font-weight: 600;
+        text-transform: uppercase;
         font-stretch: normal;
         font-style: normal;
         margin-top: 100px;
@@ -29,7 +31,8 @@
     }
 
     .desc1{
-
+        margin-top: -20px;
+        margin-bottom: 40px;
         font-size: 18px;
         font-weight: 300;
         font-stretch: normal;
@@ -61,6 +64,7 @@
 
 
             .city{
+                font-family: ProximaNova;
                 text-align: start;
                 font-size: 16px;
                 font-weight: normal;
@@ -126,14 +130,13 @@
 
         img{
 
+            width: 17%;
             margin: 0px 30px;
-
-
 
         }
 
         .comment-block{
-            width: 60%;
+            width: 50%;
 
             padding: 30px 20px;
             display: flex;
@@ -166,6 +169,7 @@
             .position{
 
                 font-size: 12px;
+                margin-top: 10px;
                 font-weight: 600;
                 font-stretch: normal;
                 font-style: normal;
@@ -327,7 +331,7 @@
             img{
     
                 margin: 0px 10px;
-    
+                width: 30%;
     
     
             }

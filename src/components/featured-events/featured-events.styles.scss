@@ -1,3 +1,25 @@
+
+@font-face{
+    src: url('../../fonts/Proxima Nova Regular.otf');
+    font-family: ProximaNova;
+}
+@font-face{
+    src: url('../../fonts/Proxima Nova Light.otf');
+    font-family: ProximaNovaLight;
+}
+
+@font-face{
+    src: url('../../fonts/Proxima Nova Bold.otf');
+    font-family: ProximaNovaBold;
+}
+
+@font-face{
+    src: url('../../fonts/Proxima Nova Semibold.otf');
+    font-family: ProximaNovaSemibold;
+}
+
+
+
 .container{
     width: 100%;
     display: flex;
@@ -8,7 +30,7 @@
 
     .header{
         
-        margin-top: 50px;
+        margin-top: 70px;
         display: flex;
         flex-direction: column;
         position: relative;
@@ -33,6 +55,7 @@
             font-weight: normal;
             font-stretch: normal;
             font-style: normal;
+            // font-family: ProximaNovaSemiBold;
             line-height: 2;
             letter-spacing: 1px;
             text-align: center;
@@ -43,6 +66,7 @@
 
     .featured-events{
 
+        margin-top: 60px;
         width: 90%;
         display: flex;
         flex-direction: row;
@@ -87,7 +111,7 @@
     
                     .event{
                         
-                        margin: 20px 10px;
+                        margin: 20px 30px;
                         width: 90%;
                         border: solid 0.5px #e2e2e2;
                         // height: 100%;
@@ -103,10 +127,11 @@
                             // width: 80%;
                             flex-direction: column;
                             align-items: flex-start;
-                            padding: 10px 10px;
+                            padding: 0px 10px;
                             
                             .title{
                                 font-size: 14px;
+                                font-family: ProximaNovaSemiBold;
                                 font-weight: 600;
                                 font-stretch: normal;
                                 font-style: normal;
@@ -210,11 +235,11 @@
             right: 10px;
             left: auto;
             padding: 10px;
-            width: 50px;
-            height: 50px;
+            width: 30px;
+            height: 30px;
             background-size: contain;
             background-image: none;
-            background-image: url("/images/right-side3.png");
+            background-image: url("/images/right-side.png");
             border-radius: 25px;
             margin: 0px 10px;
             top: 50%;
@@ -231,11 +256,11 @@
             left: 10px;
             right: auto;
             padding: 10px;
-            width: 50px;
-            height: 50px;
+            width: 30px;
+            height: 30px;
             background-size: contain;
             margin: 0px 10px;
-            background-image: url("/images/left-side3.png");
+            background-image: url("/images/left-side.png");
             border-radius: 25px;
     
             top: 50%;

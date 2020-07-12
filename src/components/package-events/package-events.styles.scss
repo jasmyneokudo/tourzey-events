@@ -1,9 +1,20 @@
+@font-face{
+    src: url('../../fonts/Proxima Nova Regular.otf');
+    font-family: ProximaNova;
+}
+@font-face{
+    src: url('../../fonts/Proxima Nova Light.otf');
+    font-family: ProximaNovaLight;
+}
+
+
 .package-events{
     padding: 50px 0px;
 
 
     .title{
 
+        
         font-size: 32px;
         font-weight: 300;
         font-stretch: normal;
@@ -51,6 +62,7 @@
                 .name{
 
                     font-size: 16px;
+                    font-family: ProximaNova;
                     font-weight: 600;
                     font-stretch: normal;
                     font-style: normal;

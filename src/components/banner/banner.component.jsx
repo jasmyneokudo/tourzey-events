@@ -28,6 +28,7 @@ class Banner extends React.Component {
         this.state = {citiesHidden: true,
             date: new Date(),
              eventTypeHidden: true,
+             statesShown: false,
               guestSizeHidden: true,
                 calendarHidden: true};
 
@@ -43,33 +44,41 @@ render(){
     console.log(this.state.hidden+'hi');
     return(
 
-    <div   className='banner'>
+    <div   className='banner'  onClick={ ()=> {
+        
+        if (this.state.statesShown) {
+            this.setState({
+                // citiesHidden: true,
+                statesShown: false
+            });
+        }
+
+        if(!this.state.citiesHidden){
+            this.setState({
+                citiesHidden: true
+            });
+        }
+
+        if (!this.state.eventTypeHidden) {
+            this.setState({
+                eventTypeHidden: true
+            });
+        }
+        if (!this.state.guestSizeHidden) {
+            this.setState({
+                guestSizeHidden: true
+            });
+        }
+
+        if (!this.state.calendarHidden) {
+            this.setState({
+                calendarHidden: true
+            });
+        }
+    }}>
 
         <div 
-         onClick={ ()=> {
         
-            if (!this.state.citiesHidden) {
-                this.setState({
-                    citiesHidden: true
-                });
-            }
-            if (!this.state.eventTypeHidden) {
-                this.setState({
-                    eventTypeHidden: true
-                });
-            }
-            if (!this.state.guestSizeHidden) {
-                this.setState({
-                    guestSizeHidden: true
-                });
-            }
-    
-            if (!this.state.calendarHidden) {
-                this.setState({
-                    calendarHidden: true
-                });
-            }
-        }}
         
         className='inner'>
         <img className='image' style={{
@@ -81,99 +90,145 @@ render(){
         }} src='/images/hero-header@2x.png'/>
 
         <div className='banner-details'>
-            <p >Book corporate and group events 
-        that will entertain and inspire your team.</p>
+            <span className='bannerDesc'>Book corporate and group events that will entertain and inspire your team.</span>
 
-        <div 
-       
-        className='form'>
+        <div className='form'>
                 
+        <div style={{display:'flex', width:'40%',   flexDirection:'column'}}>    
+            <CustomInput 
+            value={this.props.selectedEvent}
+            style={{width:'100%'}}
+            onClick={ ()=> {
+            
+                if (this.state.eventTypeHidden) {
+                    this.setState({
+                        eventTypeHidden: false
+                    });
+                }
+            }}
+            hint='Event Type'svg={<EventLogo className='logo'/>}/>
+
+            {
+                this.state.eventTypeHidden ? null:
+                <EventType/> 
+            }
+        </div>  
+        <div style={{width: '0.5px',
+            height: '22px',
+            background: '#c6c6c6',
+            marginRight:15,
+            alignSelf:'center'}} ></div>
+
+        <div style={{display:'flex', width:'15%', flexDirection:'column'}}>
+                <CustomInput hint='City'
+                value={this.props.selectedCity}
+            style={{width:'100%'}}
+                onClick={ ()=> {
                 
-        <CustomInput
-        onClick={ ()=> {
+                    if (this.state.citiesHidden) {
+                        this.setState({
+                            citiesHidden: false
+                        });
+                    }
+                }} 
+                 svg={<CityLogo className='logo'/>}/>
+
+                {
+                
+                this.state.citiesHidden ? null:
+                <CityDropdown onTopClicked={  
+                    () => alert('hii')
+                } onClicked={
+                    () => {
+                        if (!this.state.statesShown) {
+                            this.setState({
+                                statesShown: true,
+                                // citiesHidden: true
+                            });
+                        }
+                    }
+                }/> 
+              }
+        </div>
+        <div style={{width: '0.5px',
+            height: '22px',
+            background: '#c6c6c6',
+            marginRight:15,
+            alignSelf:'center'}} ></div>
         
-            if (this.state.eventTypeHidden) {
-                this.setState({
-                    eventTypeHidden: false
-                });
-            }
-        }}
-        hint='Event Type' width='60%' svg={<EventLogo className='logo'/>}/>
-        <span >&#x2758;</span>
-        <CustomInput hint='City'
-        onClick={ ()=> {
+        <div style={{display:'flex', width:'20%', flexDirection:'column'}}>
+            <CustomInput
+             value={this.props.selectedSize}
+             style={{width:'100%'}}
+             onClick={ ()=> {
+            
+                if (this.state.guestSizeHidden) {
+                    this.setState({
+                        guestSizeHidden: false
+                    });
+                }
+            }}
+            hint='Guest Size'  width='20%' svg={<GuestLogo className='logo'/>}/>
+            { 
+                this.state.guestSizeHidden ? <div/>:
+                <GuestSize/> 
+           }
+
+        </div>
+        <div style={{width: '0.5px',
+            height: '22px',
+            background: '#c6c6c6',
+            marginRight:15,
+            alignSelf:'center'}} ></div>
         
-            if (this.state.citiesHidden) {
-                this.setState({
-                    citiesHidden: false
-                });
-            }
-        }}
-        width='20%'  svg={<CityLogo className='logo'/>}/>
-        <span>&#x2758;</span>
-        
-        <CustomInput
-        onClick={ ()=> {
-        
-            if (this.state.guestSizeHidden) {
-                this.setState({
-                    guestSizeHidden: false
-                });
-            }
-        }}
-        hint='Guest Size'  width='20%' svg={<GuestLogo className='logo'/>}/>
-        <span >&#x2758;</span>
-        
-        <CustomInput 
-         onClick={ ()=> {
-        
-            if (this.state.calendarHidden) {
-                this.setState({
-                    calendarHidden: false
-                });
-            }
-        }}
-        hint='Date' width='10%' svg={<DateLogo className='logo'/>}/>
+        <div style={{display:'flex', width:'15%', flexDirection:'column'}}>
+            <CustomInput 
+            value={this.props.selectedDate}
+            style={{width:'100%'}}
+            onClick={ ()=> {
+            
+                if (this.state.calendarHidden) {
+                    this.setState({
+                        calendarHidden: false
+                    });
+                }
+            }}
+            hint='Date'  svg={<DateLogo className='logo'/>}/>
+             
+            { 
+            this.state.calendarHidden ? <div/>:
+            <Calendar  onChange={this.onChange}
+            value={this.state.date}/> 
+        }
+
+
+        </div>
     
-        <div className='search-btn' onClick={this.props.toggleDropdown} style={{cursor:'pointer', background:'#e31f3d'}}>
+        <div className='search-btn' onClick={this.props.toggleDropdown} 
+        style={{cursor:'pointer', background:'#e31f3d', width:'10%'}}>
             <SearchIcon/>
         </div>
     </div>
     
         </div>
         </div>
-
-        {
-           
-           this.state.citiesHidden ? null:
-           <CityDropdown/> 
-       }
-        {
-           this.state.eventTypeHidden ? null:
-           <EventType/> 
-       }
-       { 
-           this.state.guestSizeHidden ? <div/>:
-           <GuestSize/> 
-       }
-        { 
-           this.state.calendarHidden ? <div/>:
-           <Calendar  onChange={this.onChange}
-           value={this.state.date}/> 
-       }
-
+      
     </div>
 )};}
 
 const mapStateToProps = (state) => {
     return{
-        hidden: state.dropdown.hidden}
+        hidden: state.dropdown.hidden,
+        selectedEvent: state.selectedEvent,
+        selectedCity: state.selectedCity,
+        selectedSize: state.selectedSize,
+        selectedDate: state.selectDate}
 };
 
 const mapDispatchToProps = dispatch => ({
     
-    toggleDropdown: () => dispatch(actions.toggleDropdown())
+    toggleDropdown: () => dispatch(actions.toggleDropdown()),
+    
 });
-
 
 export default connect(mapStateToProps, mapDispatchToProps)(Banner);

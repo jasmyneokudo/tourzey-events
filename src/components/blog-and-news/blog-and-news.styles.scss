@@ -10,9 +10,10 @@
 
     .title{
 
-        margin-top: 50px;
+        margin-top: 65px;
         font-size: 12px;
         font-weight: 600;
+        font-family: ProximaNova;
         font-stretch: normal;
         font-style: normal;
         line-height: normal;
@@ -159,7 +160,7 @@
                 width: 93%;
 
                 &:hover{
-                    border: solid 1px #000000;
+                    border: solid 0.2px #000000;
                     background-color: #ffffff;
                 }
 
@@ -305,7 +306,7 @@
         margin-top: 50px;
         background-color: white;
         outline: none;
-        
+        cursor: pointer;
         border: solid 2px #e31f3d;
     }
 }
@@ -325,7 +326,7 @@
     
         .title{
     
-            margin-top: 50px;
+            margin-top: 65px;
             font-size: 12px;
             font-weight: 600;
             font-stretch: normal;
@@ -477,10 +478,9 @@
                     width: 100%;
     
                     &:hover{
-                        border: solid 1px #000000;
+                        border: solid 0.2px #000000;
                         background-color: #ffffff;
                     }
-    
     
                     .title{
     
@@ -622,7 +622,7 @@
             margin-top: 50px;
             background-color: white;
             outline: none;
-            
+            cursor: pointer;
             border: solid 2px #e31f3d;
         }
     }
@@ -647,7 +647,7 @@
     
         .title{
     
-            margin-top: 50px;
+            margin-top: 65px;
             font-size: 12px;
             font-weight: 600;
             font-stretch: normal;
@@ -801,7 +801,7 @@
                     width: 100%;
     
                     &:hover{
-                        border: solid 1px #000000;
+                        border: solid 0.2px #000000;
                         background-color: #ffffff;
                     }
     
@@ -952,7 +952,7 @@
             margin-top: 50px;
             background-color: white;
             outline: none;
-            
+            cursor: pointer;
             border: solid 2px #e31f3d;
         }
     }

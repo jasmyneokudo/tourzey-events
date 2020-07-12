@@ -1,8 +1,7 @@
 import React from 'react';
 import Swiper from 'swiper'
 import "swiper/css/swiper.css";
-// import 'swiper/css/swiper.min.css'
-// import 'swiper/js/swiper.min.js'
+import {ReactComponent as Heart} from '../../assets/heart-2.svg';
 
 import './featured-events.styles.scss';
 
@@ -68,7 +67,7 @@ class FeaaturedEvents extends React.Component  {
                 <div className='header'>
                         <p className='title'>Featured events</p>
                         <p className='desc'>FROM EVENT IDEAS TO VENUES FOR YOUR NEXT 
-                        TEAM-BUILDING <br/> ACTIVITY, 
+                        TEAM-BUILDING ACTIVITY, <br/>
     COMPANY PARTY, CORPORATE MEETING AND MORE.</p>
 
                     </div>  
@@ -81,8 +80,9 @@ class FeaaturedEvents extends React.Component  {
                         <div class="swiper-slide">
                             
                             <div className='event'>
+                                <Heart style={{ position:'absolute', marginTop:'5%', left:'80%'}}/>
 
-                                <img src='/images/corporate-dinner.png'/>       
+                                <img src='/images/corporate-dinner2.png'/>       
 
                                 <div className='details'>
 
@@ -108,8 +108,10 @@ class FeaaturedEvents extends React.Component  {
                         <div class="swiper-slide">
                             
                                 <div className='event'>
+                                <Heart style={{ position:'absolute', marginTop:'5%', left:'80%'}}/>
 
-                                <img src='/images/ridge-climbing.png'/>       
+
+                                <img src='/images/ridge-climbing2.png'/>       
 
                                 <div className='details'>
 
@@ -133,9 +135,10 @@ event athletic and exciting too.</p>
                         </div>
                         <div class="swiper-slide">
                             
-                                    <div className='event'>
+                                <div className='event'>
+                                <Heart style={{ position:'absolute', marginTop:'5%', left:'80%'}}/>
 
-                                <img src='/images/city-hunt.png'/>       
+                                <img src='/images/city-hunt2.png'/>       
 
                                 <div className='details'>
 
@@ -162,8 +165,10 @@ event athletic and exciting too.</p>
                             
 
                                     <div className='event'>
+                                    <Heart style={{ position:'absolute', marginTop:'5%', left:'80%'}}/>
 
-                                <img src='/images/escape-room.png'/>       
+
+                                <img src='/images/escape-room2.png'/>       
 
                                 <div className='details'>
 
@@ -188,8 +193,10 @@ event athletic and exciting too.</p>
                         <div class="swiper-slide">
                             
                                 <div className='event'>
+                                <Heart style={{ position:'absolute', marginTop:'5%', left:'80%'}}/>
 
-                                <img src='/images/corporate-dinner.png'/>       
+
+                                <img src='/images/corporate-dinner2.png'/>       
 
                                 <div className='details'>
 

@@ -14,10 +14,10 @@ class OrganisingEvents extends React.Component {
         var swiper = new Swiper('.s1', {
             spaceBetween: 30,
             centeredSlides: true,
-            autoplay: {
-              delay: 2500,
-              disableOnInteraction: false,
-            },
+            // autoplay: {
+            //   delay: 2500,
+            //   disableOnInteraction: false,
+            // },
             pagination: {
               el: '.swiper-pagination',
               clickable: true,
@@ -42,7 +42,8 @@ class OrganisingEvents extends React.Component {
 
             <p className='title'>Organising Events In</p>
             <p className='desc'>Over 200+ cities and counting</p>
-            <p className='desc1'>Things to do nearby and your entire event in a few clicks.</p>
+            <span className='desc1'>
+                Things to do nearby and your entire event in a few clicks.</span>
 
             <div className='cities'>
 
@@ -100,7 +101,7 @@ class OrganisingEvents extends React.Component {
 
             <div className='swiper-slide'>
 
-            <img src='/images/user.png'/>
+            <img src='/images/user2.png'/>
 
             <div className='comment-block'>
 
@@ -110,8 +111,8 @@ class OrganisingEvents extends React.Component {
                 amazing customer service I get from Tourzey. They always give me 
                 a variety of different options to choose from, and they are super 
                 accommodating for my last minute needs.”</p>
-                <p className='name'>Isabelle Bryant</p>
-                <p className='position'>Sr. Manager, TryHungry</p>
+                <span className='name'>Isabelle Bryant</span>
+                <span className='position'>SR. MANAGER, TRYHUNGRY</span>
             </div>
             </div>
             

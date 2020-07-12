@@ -2,7 +2,6 @@ import React from 'react';
 import './header.styles.scss';
 import {ReactComponent as AppLogo} from '../../assets/tourzey-logo.svg';
 
-
 const Header = () => (
 
     <div className='header'>

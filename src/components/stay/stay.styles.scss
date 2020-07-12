@@ -12,6 +12,7 @@
         margin-top: 50px;
         font-size: 12px;
         font-weight: 600;
+        font-family: ProximaNova;
         font-stretch: normal;
         font-style: normal;
         line-height: normal;
@@ -34,7 +35,7 @@
     .content{
 
         display: flex;
-        width: 50%;
+        width: 45%;
         flex-direction: row;
         // width: 100%;
         margin-top: 30px;
@@ -45,19 +46,18 @@
 
         .mail{
 
-            margin: 0px 0px;
-            width: 100px;
+            width: 60px;
         }
 
         input{
             border: none;
             height: 50px;
             margin-right: 90px;
-            // width: 100%;
+            width: 70%;
             font-size: 14px;
             font-weight: normal;
             font-stretch: normal;
-            font-family: proxima-nova, sans-serif;
+            font-family: ProximaNova, sans-serif;
      
             &:focus{
                 outline: none;
@@ -71,7 +71,7 @@
             padding: 0px 20px;
             height: 50px;
             cursor: pointer;
-            width: 30%;
+            width: 20%;
             background-color: #e31f3d;
             font-size: 14px;
             font-weight: normal;
@@ -140,18 +140,18 @@
     
             .mail{
 
-                width: 100px;
+                width: 60px;
             }
             input{
                 border: none;
                 height: 50px;
-                width: 100%;
+                width: 70%;
                 margin-right: 90px;
                 // width: 100%;
                 font-size: 14px;
                 font-weight: normal;
                 font-stretch: normal;
-                font-family: proxima-nova, sans-serif;
+                font-family: ProximaNova, sans-serif;
          
                 &:focus{
                     outline: none;
@@ -164,6 +164,7 @@
     
                 padding: 0px 20px;
                 height: 50px;
+                width: 20%;
                 cursor: pointer;
                 background-color: #e31f3d;
                 font-size: 14px;

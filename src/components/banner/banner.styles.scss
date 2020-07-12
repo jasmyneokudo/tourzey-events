@@ -1,5 +1,13 @@
 
-
+@font-face{
+    src: url('../../fonts/Proxima Nova Regular.otf');
+    font-family: ProximaNova;
+}
+@font-face{
+    src: url('../../fonts/Proxima Nova Light.otf');
+    font-family: ProximaNovaLight;
+}
+// 1255 - 801
 .banner{
     // background: url("/images/hero-header@2x.png")  no-repeat;
     width: 100%;
@@ -30,6 +38,12 @@
     
 
     .react-calendar{
+        height: 368px;
+        width: 380px;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
         position: absolute;
         box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.08);
         border-top: 5px solid #e31f3d;
@@ -37,43 +51,74 @@
         border-right: solid 0.5px #e2e2e2;
         border-bottom: solid 0.5px #e2e2e2;
         background-color: #ffffff;
-        top: 635px;
-        right: 460px;
+        margin-top: 34px;
+    margin-left: -250px;
+        // top: 635px;
+        // right: 460px;
         z-index: 10;
 
         .react-calendar__tile--now {
+            width: 40px;
+            height: 40px;
             border: solid 2px #e31f3d;
-            border-radius: 50%;
+            border-radius: 0;
             background-color: #ffffff;
 
           }
 
           .react-calendar__tile--active {
+            width: 50px;
+            height: 50px;
             background: #ffffff;
-            border: solid 2px black;
+            border: solid 2px #e31f3d;
             border-radius: 50%;
-            color: black;
+            
+            color: black; 
             
           }
-    }
+
+          .react-calendar__month-view__days__day--weekend {
+            color: black;
+          }
+          .react-calendar__month-view__days__day--neighboringMonth {
+            display: none;
+          }
+
+          .react-calendar__month-view__weekdays {
+            text-align: center;
+            margin-bottom: 10px;
+            font-family: ProximaNova;
+            text-transform: uppercase;
+            font-size: 12px;
+            font-weight: normal;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: normal;
+            letter-spacing: 1px;
+            text-align: center;
+            color: #757575;
+            }
+        }
 
     .banner-details{
+
         background-color: #ffffff;
         width: 50%;
+        height: 30%;
         position: absolute;
         display: flex;
-        flex-wrap: wrap;
+        justify-content: space-around;
         flex-direction: column;
         // z-index: 10;
         bottom: 100px;
         padding: 20px;
         
 
-        p{
+        .bannerDesc{
         
-            font-family: proxima-nova, sans-serif;
+            font-family: ProximaNovaLight;
             font-size: 36px;
-            font-weight: lighter;
+            font-weight: 300;
             text-align: left;
             font-stretch: normal;
             font-style: normal;
@@ -85,7 +130,6 @@
         .form{
             padding-left: 10px;
             height: 50px;
-            flex-shrink: inherit;
             width: 100%;
             align-items: center;
             display: flex;
@@ -95,18 +139,18 @@
             background-color: #ffffff;
 
 
-            span{
+            // span{
 
-                // margin-top:0; 
-                color:#e2e2e2;
-                font-size: 30px;
-                 margin-right:10px;
-                  position:relative;
-                   top:5;
-            }
+            //     // margin-top:0; 
+            //     color:#e2e2e2;
+            //     font-size: 30px;
+            //      margin-right:10px;
+            //       position:relative;
+            //        top:5;
+            // }
             .search-btn{
                 height: 50px;
-                width: 80px;
+                width: '80px';
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -118,7 +162,12 @@
    
 }
 
-@media screen and (max-width: 800px) and (min-width: 501px){
+// @media screen and (max-width: 1255px) and (min-width: 801px){
+
+
+// }
+
+@media screen and (max-width: 1255px) and (min-width: 501px){
 
     .banner{
 
@@ -129,32 +178,67 @@
         align-items: center;
         justify-content: center;
 
-        .react-calendar{
-            position: absolute;
-            box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.08);
-            border-top: 5px solid #e31f3d;
-            border-left: solid 0.5px #e2e2e2;
-            border-right: solid 0.5px #e2e2e2;
-            border-bottom: solid 0.5px #e2e2e2;
+         .react-calendar{
+        height: 368px;
+        width: 380px;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.08);
+        border-top: 5px solid #e31f3d;
+        border-left: solid 0.5px #e2e2e2;
+        border-right: solid 0.5px #e2e2e2;
+        border-bottom: solid 0.5px #e2e2e2;
+        background-color: #ffffff;
+        margin-top: 34px;
+    margin-left: -250px;
+        // top: 635px;
+        // right: 460px;
+        z-index: 10;
+
+        .react-calendar__tile--now {
+            width: 40px;
+            height: 40px;
+            border: solid 2px #e31f3d;
+            border-radius: 0;
             background-color: #ffffff;
-            top: 620px;
-            right: 20px;
-            z-index: 10;
-    
-            .react-calendar__tile--now {
-                border: solid 2px #e31f3d;
-                border-radius: 50%;
-                background-color: #ffffff;
-    
-              }
-    
-              .react-calendar__tile--active {
-                background: #ffffff;
-                border: solid 2px black;
-                border-radius: 50%;
-                color: black;
-                
-              }
+
+          }
+
+          .react-calendar__tile--active {
+            width: 50px;
+            height: 50px;
+            background: #ffffff;
+            border: solid 2px #e31f3d;
+            border-radius: 50%;
+            
+            color: black; 
+            
+          }
+          
+          .react-calendar__month-view__days__day--weekend {
+            color: black;
+          }
+          .react-calendar__month-view__days__day--neighboringMonth {
+            display: none;
+          }
+
+          .react-calendar__month-view__weekdays {
+            text-align: center;
+            margin-bottom: 10px;
+            font-family: ProximaNova;
+            text-transform: uppercase;
+            font-size: 12px;
+            font-weight: normal;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: normal;
+            letter-spacing: 1px;
+            text-align: center;
+            color: #757575;
+            }
         }
 
 
@@ -193,12 +277,12 @@
         
         }
 
-        p{
+        .bannerDesc{
         
-            // margin-top: -6px;
-            font-family: proxima-nova, sans-serif;
+            font-family: ProximaNovaLight;
             font-size: 25px;
-            font-weight: lighter;
+            font-weight: 300;
+            margin-bottom: 10px;
             text-align: left;
             font-stretch: normal;
             font-style: normal;
@@ -220,14 +304,7 @@
             background-color: #ffffff;
 
 
-            span{
-
-                // margin-top:0; 
-                color:#e2e2e2;
-                font-size: 30px;
-                 margin-right:10px;
-                  position:relative;
-            }
+           
 
             .search-btn{
                 height: 50px;
@@ -254,6 +331,12 @@
         justify-content: center;
 
         .react-calendar{
+            height: 368px;
+            width: 380px;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            flex-direction: column;
             position: absolute;
             box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.08);
             border-top: 5px solid #e31f3d;
@@ -261,25 +344,55 @@
             border-right: solid 0.5px #e2e2e2;
             border-bottom: solid 0.5px #e2e2e2;
             background-color: #ffffff;
-            top: 450px;
-            right:-5px;
+            margin-top: 34px;
+        margin-left: -250px;
+            // top: 635px;
+            // right: 460px;
             z-index: 10;
     
             .react-calendar__tile--now {
+                width: 40px;
+                height: 40px;
                 border: solid 2px #e31f3d;
-                border-radius: 50%;
+                border-radius: 0;
                 background-color: #ffffff;
     
               }
     
               .react-calendar__tile--active {
+                width: 50px;
+                height: 50px;
                 background: #ffffff;
-                border: solid 2px black;
+                border: solid 2px #e31f3d;
                 border-radius: 50%;
-                color: black;
+                
+                color: black; 
                 
               }
-        }
+              
+              .react-calendar__month-view__days__day--weekend {
+                color: black;
+              }
+              .react-calendar__month-view__days__day--neighboringMonth {
+                display: none;
+              }
+    
+              .react-calendar__month-view__weekdays {
+                text-align: center;
+                margin-bottom: 10px;
+                font-family: ProximaNova;
+                text-transform: uppercase;
+                font-size: 12px;
+                font-weight: normal;
+                font-stretch: normal;
+                font-style: normal;
+                line-height: normal;
+                letter-spacing: 1px;
+                text-align: center;
+                color: #757575;
+                }
+            }
+    
 
 
      .inner{
@@ -303,26 +416,26 @@
     .banner-details{
         background-color: #ffffff;
         width: 85%;
+        height: fit-content;
         align-self: center;
         align-items: center;
-        justify-content: center;
+        justify-content: space-between;
         // position: absolute;
         display: flex;
         flex-direction: column;
         // z-index: 10;
-        bottom: 60px;
-        padding: 0px 10px;
+        bottom: 300px;
+        padding: 10px 10px;
         
         
         
         }
 
-        p{
+        .bannerDesc{
         
-            // margin-top: -6px;
-            font-family: proxima-nova, sans-serif;
+            font-family: ProximaNovaLight;
             font-size: 20px;
-            font-weight: lighter;
+            font-weight: 300;
             text-align: left;
             font-stretch: normal;
             font-style: normal;
@@ -345,15 +458,6 @@
             border: solid 0.5px #e2e2e2;
             background-color: #ffffff;
 
-
-            span{
-
-                // margin-top:0; 
-                color:#e2e2e2;
-                font-size: 30px;
-                 margin-right:10px;
-                  position:relative;
-            }
 
             .search-btn{
                 height: 50px;

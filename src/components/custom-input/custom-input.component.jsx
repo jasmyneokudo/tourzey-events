@@ -10,12 +10,12 @@ import './custom-input.styles.scss';
 
 
 
-const CustomInput = ({hint, svg, width, onClick}) => (
+const CustomInput = ({hint, value, svg, style, onClick}) => (
 
-    <div className='custom-input'>
+    <div style={style} className='custom-input'>
 
         {svg}
-        <input readOnly='true' onClick={onClick} style={{width:'50%'}} 
+        <input value={value} readOnly='true' onClick={onClick} style={{width:'100%'}} 
          placeholder={hint} />
     </div>
 );

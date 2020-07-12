@@ -69,11 +69,11 @@ const Footer = () => (
 
         </div>
 
-        <hr style={{
-            color:'white',
+        <div style={{
+            background:'white',
             width:'80%',
-            opacity:0.6,
-            height:'0.6px'
+            opacity:0.4,
+            height:'0.5px'
         }}/>
 
         <div className='bottom'>

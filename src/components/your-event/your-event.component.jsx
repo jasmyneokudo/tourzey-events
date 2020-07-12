@@ -38,11 +38,11 @@ const YourEvent = () => (
 
                 <p className='title'>Professional and Seamless</p>
                 <p className='desc'>Tourzey Event Guides are professional 
-and ready to help run your next event 
-seamlessly.<span style={{
-    fontSize:'12px',
-    color:'#e31f3d'
-}}>  CALL 1-888-8TOURZEY</span></p>
+            and ready to help run your next event 
+            seamlessly.<span style={{
+                fontSize:'12px',
+                color:'#e31f3d'
+            }}>  CALL 1-888-8TOURZEY</span></p>
             </div>
 
 

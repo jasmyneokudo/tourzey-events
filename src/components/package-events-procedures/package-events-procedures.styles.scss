@@ -1,3 +1,25 @@
+
+@font-face{
+    src: url('../../fonts/Proxima Nova Regular.otf');
+    font-family: ProximaNova;
+}
+@font-face{
+    src: url('../../fonts/Proxima Nova Light.otf');
+    font-family: ProximaNovaLight;
+}
+
+@font-face{
+    src: url('../../fonts/Proxima Nova Bold.otf');
+    font-family: ProximaNovaBold;
+}
+
+@font-face{
+    src: url('../../fonts/Proxima Nova Semibold.otf');
+    font-family: ProximaNovaSemibold;
+}
+
+
+
 .procedures{
 
 
@@ -8,8 +30,10 @@
     flex-direction: column;
 
     .title{
+        margin-top: 100px;
         font-size: 12px;
         font-weight: 600;
+        font-family: ProximaNova;
         font-stretch: normal;
         font-style: normal;
         line-height: normal;
@@ -44,6 +68,7 @@
 
         img{
             margin: 50px 0px;
+            width: 35%;
         }
 
 
@@ -51,23 +76,28 @@
         div{
             display: flex;
             flex-direction: column;
-            margin: 20px 80px;
+            margin: 0px 80px;
+            height: fit-content;
+            align-self: center;
             justify-content: center;
             align-items: flex-start;
 
             
 
             .title{
-                
+                margin-top: -40px;
 
                 .index{
+                    
+                    font-family: ProximaNovaBold;
                     font-size: 14px;
-                    font-weight: bold;
+                    font-weight: normal;
                     font-stretch: normal;
                     font-style: normal;
                     line-height: normal;
                     letter-spacing: normal;
                     text-align: right;
+                    color: '#000000';
                 }
 
                 .name{
@@ -75,10 +105,12 @@
                     font-size: 24px;
                     font-weight: normal;
                     font-stretch: normal;
+                    font-family: ProximaNovaSemibold;
                     font-style: normal;
                     line-height: normal;
                     letter-spacing: normal;
                     padding-left: 10px;
+                    color: '#000000';
 
                 }
             }
@@ -94,6 +126,7 @@
                 text-align: left;
             }
             .btn{
+                margin-top: 15px;
                 padding: 0px 30px;
                 height: 40px;
                 background-color: #e31f3d;

@@ -10,6 +10,10 @@ import * as actions from '../../actions';
 
 class CityDropdown extends React.Component {
 
+    constructor(onClicked, onTopClicked){
+        super(onClicked, onTopClicked);
+    }
+
 
     renderStates(state, states){
 
@@ -19,10 +23,15 @@ class CityDropdown extends React.Component {
 
             return (
 
-                <div className='drop-down'>
+                <div onClick={ this.props.onClicked } className='drop-down'>
                    { 
                         states.map( ({name}) => (
-                            <p className='state'>{name}</p>
+                            <p 
+                            onClick={() => 
+                                this.props.selectCity(name)
+                                
+                               }
+                            className='state'>{name}</p>
 
                         ))
                     }
@@ -62,7 +71,7 @@ class CityDropdown extends React.Component {
                 { 
                     this.props.countries.map( ({name, states}) => (
                         <div>
-                            <div className='item'>
+                            <div  className='item'>
                                 {
                                     this.renderArrow(name)
                                 }
@@ -86,7 +95,8 @@ const mapStateToProps = state =>{
 
     return{
         countries: state.countries,
-        selectedCountry: state.selectedCountry
+        selectedCountry: state.selectedCountry,
+        selectedCity: state.selectedCity
     };
 
 };
