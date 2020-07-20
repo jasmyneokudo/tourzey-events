@@ -1,3 +1,5 @@
+$animate: all 1s ease-in-out;
+
 .events{
     display: flex;
     flex-direction: column;
@@ -59,13 +61,11 @@
             display: flex;
             flex-direction: column;
             // margin: 0px 20px; 
-            
-
-
-
+             
             .city{
                 font-family: ProximaNova;
                 text-align: start;
+                cursor:pointer;
                 font-size: 16px;
                 font-weight: normal;
                 font-stretch: normal;
@@ -76,6 +76,88 @@
 
 
             }
+            .city-container{
+            .hover {
+                width: fit-content;
+                font-family: ProximaNova;
+                text-align: start;
+                cursor:pointer;
+                font-size: 16px;
+                font-weight: normal;
+                font-stretch: normal;
+                font-style: normal;
+                line-height: normal;
+                letter-spacing: 1px;
+                color: #e31f3d;
+                // margin: 0 auto;
+                // padding: 0;
+                transition: $animate;
+                position: relative;
+
+                &:before,
+                &:after {
+                  content: "";
+                  position: absolute;
+                  bottom: -10px;
+                  width: 0;
+                  height: 1px;
+                  margin: 5px 0 0;
+                  transition: $animate;
+                  transition-duration: 1s;
+                  opacity: 0;
+                  background-color: darken(#e31f3d,5%);
+                }
+                
+                &.hover-1 {
+                  &:before,
+                  &:after {
+                    left: 0;
+                  }
+                }
+                &.hover-2 {
+                  &:before,
+                  &:after {
+                    right: 0;
+                  }
+                }
+                &.hover-3 {
+                  &:before {
+                    left: 50%;
+                  }
+                  &:after {
+                    right: 50%;
+                  }
+                }
+                &.hover-4 {
+                  &:before {
+                    left: 0;
+                  }
+                  &:after {
+                    right: 0;
+                  }
+                }
+              }
+
+              &:hover {
+                cursor: pointer;
+                .hover {
+                  &:before,
+                  &:after {
+                    width: 100%;
+                    opacity: 1;
+                  }
+                  &.hover-3,
+                  &.hover-4 {
+                    &:before,
+                    &:after {
+                      width: 50%;
+                    }
+                  }
+                }
+              }
+            }
+             
+
         }
     }
 

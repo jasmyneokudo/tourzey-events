@@ -14,8 +14,10 @@ const PackageEventsProcedures = () => (
 
             <div>
 
-                <p className='title'><text className='index'>1.  
-                 </text><text className='name'> Choose your event</text></p>
+                <p className='title'>
+                    <text className='index'>1.  
+                 </text>
+                 <text className='name'> Choose your event</text></p>
                 <p className='desc'>Ready to start your special event? Simply use the 
                     search bar to select the type of event, location, 
                     date and the expected number of guests.</p>

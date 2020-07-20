@@ -119,6 +119,7 @@
     
                         img{
                             width: 100%;
+                            z-index: 0;
                         }
                         .details{
                             
@@ -144,6 +145,7 @@
                             .state{
                                 
                                 margin-top: -10px;
+                                font-family: ProximaNova;
                                 font-size: 12px;
                                 font-weight: normal;
                                 font-stretch: normal;
@@ -155,9 +157,9 @@
         
                             .desc{
                                 font-size: 12px;
-                                // height: 54px;
-                                font-weight: 300;
+                                font-family: ProximaNovaLight;
                                 font-stretch: normal;
+                                margin-bottom: 30px;
                                 font-style: normal;
                                 line-height: 1.5;
                                 text-align: left;
@@ -411,9 +413,9 @@
             
                                 .desc{
                                     font-size: 12px;
-                                    // height: 54px;
-                                    font-weight: 300;
+                                    font-family: ProximaNovaLight;
                                     font-stretch: normal;
+                                    margin-bottom: 30px;
                                     font-style: normal;
                                     line-height: 1.5;
                                     text-align: left;
@@ -495,7 +497,7 @@
                 height: 50px;
                 background-size: contain;
                 background-image: none;
-                background-image: url("/images/right-side3.png");
+                background-image: url("../../assets/right-side.svg");
                 border-radius: 25px;
                 margin: 0px 10px;
                 top: 50%;
@@ -516,7 +518,7 @@
                 height: 50px;
                 background-size: contain;
                 margin: 0px 10px;
-                background-image: url("/images/left-side3.png");
+                background-image: url("../../assets/left-side.svg");
                 border-radius: 25px;
         
                 top: 50%;

@@ -26,7 +26,7 @@ class Banner extends React.Component {
 
         super();
         this.state = {citiesHidden: true,
-            date: new Date(),
+            date: null,
              eventTypeHidden: true,
              statesShown: false,
               guestSizeHidden: true,
@@ -53,16 +53,18 @@ render(){
             });
         }
 
-        if(!this.state.citiesHidden){
-            this.setState({
-                citiesHidden: true
-            });
-        }
+        // if(!this.state.citiesHidden){
+        //     this.setState({
+        //         citiesHidden: true
+        //     });
+        //     this.props.selectOption(null);
+        // }
 
         if (!this.state.eventTypeHidden) {
             this.setState({
                 eventTypeHidden: true
             });
+            
         }
         if (!this.state.guestSizeHidden) {
             this.setState({
@@ -70,11 +72,11 @@ render(){
             });
         }
 
-        if (!this.state.calendarHidden) {
-            this.setState({
-                calendarHidden: true
-            });
-        }
+        // if (!this.state.calendarHidden) {
+        //     this.setState({
+        //         calendarHidden: true
+        //     });
+        // }
     }}>
 
         <div 
@@ -87,17 +89,27 @@ render(){
             // position:'absolute',
             
             backgroundSize:'contain'
-        }} src='/images/hero-header@2x.png'/>
+        }} src='/images/hero-header@2x.jpg'/>
 
         <div className='banner-details'>
             <span className='bannerDesc'>Book corporate and group events that will entertain and inspire your team.</span>
 
         <div className='form'>
                 
-        <div style={{display:'flex', width:'40%',   flexDirection:'column'}}>    
+        <div onMouseLeave={
+            () => {
+                if (!this.state.eventTypeHidden) {
+                    this.setState({
+                        eventTypeHidden: true
+                    });
+                   
+                }
+            }
+        } 
+         style={{display:'flex', width:'40%',height:'100%', justifyContent:'space-between',  flexDirection:'column'}}>    
             <CustomInput 
             value={this.props.selectedEvent}
-            style={{width:'100%'}}
+            style={{width:'100%', height:'100%'}}
             onClick={ ()=> {
             
                 if (this.state.eventTypeHidden) {
@@ -119,23 +131,36 @@ render(){
             marginRight:15,
             alignSelf:'center'}} ></div>
 
-        <div style={{display:'flex', width:'15%', flexDirection:'column'}}>
-                <CustomInput hint='City'
+        <div onMouseLeave={
+            () => {
+                if (!this.state.citiesHidden) {
+                    this.setState({
+                        citiesHidden: true
+                    });
+                   
+                }
+            }
+        } style={{display:'flex', width:'15%' , height:'100%', flexDirection:'column'}}>
+                <CustomInput hint='City' 
                 value={this.props.selectedCity}
-            style={{width:'100%'}}
+            style={{width:'100%', height:'100%'}}
                 onClick={ ()=> {
                 
+                   
                     if (this.state.citiesHidden) {
                         this.setState({
                             citiesHidden: false
                         });
+                        this.props.selectOption(1);
+                    }else{
+                        this.props.selectOption(null);
                     }
                 }} 
                  svg={<CityLogo className='logo'/>}/>
 
                 {
                 
-                this.state.citiesHidden ? null:
+                (this.state.citiesHidden) ? null:
                 <CityDropdown onTopClicked={  
                     () => alert('hii')
                 } onClicked={
@@ -143,7 +168,7 @@ render(){
                         if (!this.state.statesShown) {
                             this.setState({
                                 statesShown: true,
-                                // citiesHidden: true
+                                citiesHidden: true
                             });
                         }
                     }
@@ -156,10 +181,22 @@ render(){
             marginRight:15,
             alignSelf:'center'}} ></div>
         
-        <div style={{display:'flex', width:'20%', flexDirection:'column'}}>
+        <div
+        onMouseLeave={
+            () => {
+                if (!this.state.guestSizeHidden) {
+                    this.setState({
+                        guestSizeHidden: true
+                    });
+                   
+                }
+            }
+        }
+        
+        style={{display:'flex', width:'20%',  height:'100%', flexDirection:'column'}}>
             <CustomInput
              value={this.props.selectedSize}
-             style={{width:'100%'}}
+             style={{width:'100%',height:'100%'}}
              onClick={ ()=> {
             
                 if (this.state.guestSizeHidden) {
@@ -181,10 +218,22 @@ render(){
             marginRight:15,
             alignSelf:'center'}} ></div>
         
-        <div style={{display:'flex', width:'15%', flexDirection:'column'}}>
+        <div
+        onMouseLeave={
+            () => {
+                if (!this.state.calendarHidden) {
+                    this.setState({
+                        calendarHidden: true
+                    });
+                   
+                }
+            }
+        }
+        
+        style={{display:'flex', width:'15%', height:'100%', flexDirection:'column'}}>
             <CustomInput 
-            value={this.props.selectedDate}
-            style={{width:'100%'}}
+            value={this.state.date}
+            style={{width:'100%', height:'100%'}}
             onClick={ ()=> {
             
                 if (this.state.calendarHidden) {
@@ -200,8 +249,6 @@ render(){
             <Calendar  onChange={this.onChange}
             value={this.state.date}/> 
         }
-
-
         </div>
     
         <div className='search-btn' onClick={this.props.toggleDropdown} 
@@ -220,14 +267,17 @@ const mapStateToProps = (state) => {
     return{
         hidden: state.dropdown.hidden,
         selectedEvent: state.selectedEvent,
-        selectedCity: state.selectedCity,
+        selectedCity: state.selectedCity.selectedState,
+        option: state.selectedCity.option,
         selectedSize: state.selectedSize,
-        selectedDate: state.selectDate}
+        selectedDate: state.selectDate,
+        selectedOption: state.selectedCity.option}
 };
 
 const mapDispatchToProps = dispatch => ({
     
     toggleDropdown: () => dispatch(actions.toggleDropdown()),
+    selectOption: (option) => dispatch(actions.selectOption(option))
     
 });
 

@@ -18,7 +18,7 @@ const BlogAndNews = () => (
             <div 
             className='background-image'
             style={{
-                background: 'url(/images/restaurant-room.png) repeat-x' ,
+                background: 'url(/images/restaurant-room2.jpg) repeat-x' ,
                 backgrouundSize:'contain',
                 backgroundPosition:'center'
             }}/>
@@ -54,7 +54,7 @@ scale our operations in one of the largest markets in the world.</p>
                     <div 
                     className='background-image'
                     style={{
-                        background: 'url(/images/couples-painting2.png) no-repeat',
+                        background: 'url(/images/couples-painting2.jpg) no-repeat',
                         backgroundSize:'contain',
                         backgroundPosition:'center'
                     }}/>
@@ -77,7 +77,7 @@ and suggestions</p>
                     className='background-image'
                     style={{
                         
-                        background: 'url(/images/asia-china2.png) no-repeat',
+                        background: 'url(/images/asia-china2.jpg) no-repeat',
                         backgroundSize:'contain',
                         backgroundPosition:'center'
                     }}/>

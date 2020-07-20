@@ -8,7 +8,10 @@
   font-weight: 300;
 
 }
-
+a {
+  text-decoration: none;
+  color: #e31f3d;
+}
 /* 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {

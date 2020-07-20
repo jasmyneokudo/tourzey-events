@@ -1,9 +1,21 @@
+
+@font-face{
+    src: url('../../fonts/Proxima Nova Regular.otf');
+    font-family: ProximaNova;
+}
+@font-face{
+    src: url('../../fonts/Proxima Nova Light.otf');
+    font-family: ProximaNovaLight;
+}
+
+
 .header{
 
     height: 70px;
     width: 100%;
     padding: 0px 20px;
     display: flex;
+    padding-right: 153px;
     display: flex;
     justify-content: space-between;
 
@@ -22,18 +34,28 @@
         align-items: center;
         justify-content: flex-end;
 
-        p{
+        a{
             
            padding: 10px 15px;
-            font-family: proxima-nova, sans-serif;;
+            font-family: ProximaNovaLight, sans-serif;;
             font-size: 14px;
             font-weight: normal;
             font-stretch: normal;
             font-style: normal;
             line-height: normal;
             letter-spacing: 1px;
+            color:black;
+
+            
+       
     
         }
+
+        & :hover{
+            // color: blue;
+            font-weight: bold;
+        }
+
     }
     
 }

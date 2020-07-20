@@ -15,7 +15,8 @@ const CustomInput = ({hint, value, svg, style, onClick}) => (
     <div style={style} className='custom-input'>
 
         {svg}
-        <input value={value} readOnly='true' onClick={onClick} style={{width:'100%'}} 
+        <input value={value} readOnly='true'
+         onClick={onClick} style={{width:'100%', height:'100%'}} 
          placeholder={hint} />
     </div>
 );

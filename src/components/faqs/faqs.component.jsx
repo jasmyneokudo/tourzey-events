@@ -59,14 +59,20 @@ class Faqs extends React.Component {
                 <p className='title'>FAQs</p>
                     <div className='list'>
                     {
-                        
                         this.props.questions.map( ({id, question}) => (
 
 
                             <div>
                                 <div className='faq'>
                                     
-                                    <p className='question'> {question}</p>
+                                    <p onClick={() => {
+                                        
+                                        if (id === this.props.selected){
+                                            this.props.selectItem(null);
+                                        }else{
+                                            this.props.selectItem(id);
+                                        }
+                                        }} className='question'> {question}</p>
                                     {
                                         this.open_close(id)
                                      }

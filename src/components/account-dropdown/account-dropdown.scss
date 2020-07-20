@@ -1,0 +1,33 @@
+.account-dropdown{
+
+    position: absolute;
+    background-color: red;
+    width: 124px;
+    height: 200px;
+    margin-top: 50px;
+    margin-left: -40px;
+    z-index: 10;
+    background-color: white;
+    display: flex;
+    padding: 20px;
+    align-items: flex-start;
+    flex-direction: column;
+    border-top: 5px solid  #e31f3d;
+    justify-content: space-evenly;
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.08);
+
+
+    span{
+        font-family: ProximaNova;
+        font-size: 14px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: 1px;
+        color: #000000;
+        display: flex;
+        align-items: center;
+    }
+   
+}

@@ -1,13 +1,40 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import Swiper from 'swiper'
 import "swiper/css/swiper.css";
 import {ReactComponent as Heart} from '../../assets/heart-2.svg';
 
+import {ReactComponent as WhiteHeart} from '../../assets/heart-white.svg';
+
+
 import './featured-events.styles.scss';
 
-class FeaaturedEvents extends React.Component  {
+const FeaaturedEvents= () =>  {
+
+    const [onHover1, setOnHover1] = useState(false);
+    const [onHover2, setOnHover2] = useState(false);
+    const [onHover3, setOnHover3] = useState(false);
+    const [onHover4, setOnHover4] = useState(false);
+    const [onHover5, setOnHover5] = useState(false);
+
+    const renderHeart = (onHover, setOnHover) => {
+        if(onHover){
+            
+            return(
+                <WhiteHeart 
+                  onMouseLeave={() => setOnHover(false) }
+                  style={{ position:'absolute', marginTop:'4%', right:'5%'}}/>
+
+            )
+        }else{
+            return(
+                <Heart 
+                 onMouseEnter={() => setOnHover(true) } 
+                 style={{ position:'absolute', marginTop:'4%', right:'5%'}}/>
+            )
+        }
+    }
     
-    componentDidMount(){
+     useEffect( () => {
 
         var swiper = new Swiper('.swiper-container', {
 
@@ -54,21 +81,18 @@ class FeaaturedEvents extends React.Component  {
               prevEl: '.swiper-button-left',
             },
           });
-    }
+    })
 
-    render(){
+
         
         return(
 
             <div className='container'>
-
-                
-
                 <div className='header'>
                         <p className='title'>Featured events</p>
                         <p className='desc'>FROM EVENT IDEAS TO VENUES FOR YOUR NEXT 
                         TEAM-BUILDING ACTIVITY, <br/>
-    COMPANY PARTY, CORPORATE MEETING AND MORE.</p>
+                            COMPANY PARTY, CORPORATE MEETING AND MORE.</p>
 
                     </div>  
                 <div className='featured-events'>
@@ -80,9 +104,10 @@ class FeaaturedEvents extends React.Component  {
                         <div class="swiper-slide">
                             
                             <div className='event'>
-                                <Heart style={{ position:'absolute', marginTop:'5%', left:'80%'}}/>
-
-                                <img src='/images/corporate-dinner2.png'/>       
+                                {
+                                     renderHeart(onHover1, setOnHover1)
+                                }
+                                <img src='/images/corporate-dinner2.jpg'/>       
 
                                 <div className='details'>
 
@@ -108,18 +133,19 @@ class FeaaturedEvents extends React.Component  {
                         <div class="swiper-slide">
                             
                                 <div className='event'>
-                                <Heart style={{ position:'absolute', marginTop:'5%', left:'80%'}}/>
+                                {
+                                    renderHeart(onHover2, setOnHover2)
+                                }
 
-
-                                <img src='/images/ridge-climbing2.png'/>       
+                                <img src='/images/ridge-climbing2.jpg'/>       
 
                                 <div className='details'>
 
                                     <p className='title'>Ridge Climbing</p>
                                     <p className='state'>Chicago</p>
                                     <p className='desc'>A unique and fun way to bond with 
-your team. Make your team building 
-event athletic and exciting too.</p>
+                                            your team. Make your team building 
+                                            event athletic and exciting too.</p>
                                     
                                 </div>
                                 <div className='footer'>
@@ -136,9 +162,10 @@ event athletic and exciting too.</p>
                         <div class="swiper-slide">
                             
                                 <div className='event'>
-                                <Heart style={{ position:'absolute', marginTop:'5%', left:'80%'}}/>
-
-                                <img src='/images/city-hunt2.png'/>       
+                                {
+                                    renderHeart(onHover3, setOnHover3)
+                                }
+                                <img src='/images/city-hunt2.jpg'/>       
 
                                 <div className='details'>
 
@@ -164,11 +191,12 @@ event athletic and exciting too.</p>
                         <div class="swiper-slide">
                             
 
-                                    <div className='event'>
-                                    <Heart style={{ position:'absolute', marginTop:'5%', left:'80%'}}/>
+                                 <div className='event'>
+                                {
+                                    renderHeart(onHover4, setOnHover4)
+                                }
 
-
-                                <img src='/images/escape-room2.png'/>       
+                                <img src='/images/escape-room2.jpg'/>       
 
                                 <div className='details'>
 
@@ -193,10 +221,10 @@ event athletic and exciting too.</p>
                         <div class="swiper-slide">
                             
                                 <div className='event'>
-                                <Heart style={{ position:'absolute', marginTop:'5%', left:'80%'}}/>
-
-
-                                <img src='/images/corporate-dinner2.png'/>       
+                                {
+                                    renderHeart(onHover5, setOnHover5)
+                                }
+                                <img src='/images/corporate-dinner2.jpg'/>       
 
                                 <div className='details'>
 
@@ -245,7 +273,7 @@ event athletic and exciting too.</p>
                 }}>SEE MORE FEATURED EVENTS</button>
             </div>
 
-        )}
+        )
     
     };
 

@@ -40,6 +40,21 @@ export const selectSize = (name) => {
     };
 };
 
+export const selectOption = (option) => {
+
+    return {
+        type: 'select_option',
+        payload: option
+    }
+}
+
+export const clickBackground = (option) => {
+    return{
+        type:'click_background',
+        payload: option
+    }
+}
+
 export const toggleDropdown = () => {
 
     return {

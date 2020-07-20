@@ -48,51 +48,77 @@ class OrganisingEvents extends React.Component {
             <div className='cities'>
 
                 <div className='list'>
-                    <p className='city'>Atlanta</p>
-                    <p className='city'>Austin</p>
-                    <p className='city'>Baltimore-Maryland</p>
-                    <p className='city'>Boston</p>
-                    <p className='city'>Charlotte</p>
-                    <p className='city'>Chicago</p>
+                    <div className='city-container'>
+                    <p  className='hover hover-3'>Atlanta</p>
+                    </div>
+                    <div className='city-container'>
+                    <p className='hover hover-3'>Austin</p></div>
+                    <div className='city-container'>
+                    <p className='hover hover-3'>Baltimore-Maryland</p></div>
+                    <div className='city-container'>
+                    <p className='hover hover-3'>Boston</p></div>
+                    <div className='city-container'>
+                    <p className='hover hover-3'>Charlotte</p></div>
+                    <div className='city-container'>
+                    <p className='hover hover-3'>Chicago</p></div>
 
                 </div>
 
                 <div className='list'>
-                    <p className='city'>Dallas-Fort Work</p>
-                    <p className='city'>Denver</p>
-                    <p className='city'>Las Vegas</p>
-                    <p className='city'>Los Angeles</p>
-                    <p className='city'>Miami</p>
-                    <p className='city'>Minneapolis-St. Paul</p>
+                <div className='city-container'>
+                    <p className='hover hover-3'>Dallas-Fort Work</p></div>
+                    <div className='city-container'>
+                    <p className='hover hover-3'>Denver</p></div>
+                    <div className='city-container'>
+                    <p className='hover hover-3'>Las Vegas</p></div>
+                    <div className='city-container'>
+                    <p className='hover hover-3'>Los Angeles</p></div>
+                    <div className='city-container'>
+                    <p className='hover hover-3'>Miami</p></div>
+                    <div className='city-container'>
+                    <p className='hover hover-3'>Minneapolis-St. Paul</p></div>
 
                 </div>
 
                 <div className='list'>
-                    <p className='city'>New York City</p>
-                    <p className='city'>Orange County</p>
-                    <p className='city'>Palm Springs</p>
-                    <p className='city'>Philadelphia</p>
-                    <p className='city'>Phoenix</p>
-                    <p className='city'>Portland</p>
+                <div className='city-container'>
+                    <p className='hover hover-3'>New York hover hover-3</p></div>
+                    <div className='city-container'>
+                    <p className='hover hover-3'>Orange County</p></div>
+                    <div className='city-container'>
+                    <p className='hover hover-3'>Palm Springs</p></div>
+                    <div className='city-container'>
+                    <p className='hover hover-3'>Philadelphia</p></div>
+                    <div className='city-container'>
+                    <p className='hover hover-3'>Phoenix</p></div>
+                    <div className='city-container'>
+                    <p className='hover hover-3'>Portland</p></div>
 
                 </div>
 
                 <div className='list'>
-                    <p className='city'>Sacramento</p>
-                    <p className='city'>San Diego</p>
-                    <p className='city'>San Francisco</p>
-                    <p className='city'>Seattle</p>
-                    <p className='city'>Tampa Bay</p>
-                    <p className='city'>Washington D.C</p>
+                   <div className='city-container'>
+                     <p className='hover hover-3'>Sacramento</p></div>
+                    <div className='city-container'>
+                     <p className='hover hover-3'>San Diego</p></div>
+                    <div className='city-container'>
+                     <p className='hover hover-3'>San Francisco</p></div>
+                    <div className='city-container'>
+                     <p className='hover hover-3'>Seattle</p></div>
+                    <div className='city-container'>
+                     <p className='hover hover-3'>Tampa Bay</p></div>
+                    <div className='city-container'>
+                     <p className='hover hover-3'>Washington D.C</p></div>
 
                 </div>
                 
             </div>
             
-            <hr style={{
+            <div style={{
                 marginTop:'50px',
                 marginBottom:'50px',
-                color:'#c6c6c6',
+                height: '0.5px',
+                backgroundColor:'#c6c6c6',
                 width:'70%'
             }}/>
 
@@ -101,7 +127,7 @@ class OrganisingEvents extends React.Component {
 
             <div className='swiper-slide'>
 
-            <img src='/images/user2.png'/>
+            <img src='/images/user2.jpg'/>
 
             <div className='comment-block'>
 

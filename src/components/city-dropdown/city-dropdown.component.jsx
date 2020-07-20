@@ -14,6 +14,40 @@ class CityDropdown extends React.Component {
         super(onClicked, onTopClicked);
     }
 
+    renderCountry(name){
+
+        if (this.props.selectedCountry === name){
+            return(
+                <div style={{background:'#FCEDEF'}}  className='item'>
+                {
+                    this.renderArrow(name)
+                }
+                    <p onClick={() => {
+                        if(this.props.selectedCountry === name){
+                        this.props.selectCountry(null)
+                        }else{
+                        this.props.selectCountry(name)
+                        }  
+                    }} className='country'>{name}</p>
+            </div>
+            )
+        }else{
+            return(
+                <div    className='item'>
+                {
+                    this.renderArrow(name)
+                }
+                    <p onClick={() => {
+                        if(this.props.selectedCountry === name){
+                        this.props.selectCountry(null)
+                        }else{
+                        this.props.selectCountry(name)
+                        }  
+                    }} className='country'>{name}</p>
+            </div>
+            )
+        }
+    }
 
     renderStates(state, states){
 
@@ -26,18 +60,18 @@ class CityDropdown extends React.Component {
                 <div onClick={ this.props.onClicked } className='drop-down'>
                    { 
                         states.map( ({name}) => (
-                            <p 
-                            onClick={() => 
-                                this.props.selectCity(name)
-                                
-                               }
-                            className='state'>{name}</p>
-
+                            <span
+                                onClick={() =>  {
+                                        this.props.selectCity(name);
+                                        this.props.selectOption(3)
+                                    }   
+                                }
+                                className='state'>{name}</span>
                         ))
                     }
                 </div>
             );
-        }else{
+        }else {
             return null;
         }
     }
@@ -50,11 +84,13 @@ class CityDropdown extends React.Component {
                 <Close style={{cursor:'pointer'}} 
                 onClick={() => this.props.selectCountry(null)}/>
             )
-        }else{
+        }else {
             return(
 
                 <Open style={{cursor:'pointer'}} 
-                onClick={() => this.props.selectCountry(name)}/>
+                onClick={() => {
+                    this.props.selectOption(2);
+                    this.props.selectCountry(name)}}/>
                                    
             );
 
@@ -64,26 +100,20 @@ class CityDropdown extends React.Component {
 
     render(){
 
-
         return(
             <div className='dropdown'>
 
                 { 
                     this.props.countries.map( ({name, states}) => (
                         <div>
-                            <div  className='item'>
-                                {
-                                    this.renderArrow(name)
-                                }
-                                 <p className='country'>{name}</p>
-                            </div>
+                            {
+                                this.renderCountry(name)
+                            }
 
                             {
                                 this.renderStates(name, states)
                             }
-                        </div>
-                        
-                       
+                        </div>   
                     ))
                 }
             </div>
@@ -100,5 +130,12 @@ const mapStateToProps = state =>{
     };
 
 };
+const mapDispatchToProps = dispatch => ({
+    
+    selectOption: (option) => dispatch(actions.selectOption(option)),
+    selectCountry: (country) => dispatch(actions.selectCountry(country)),
+    selectCity: (city) => dispatch(actions.selectCity(city))
+    
+});
 
-export default connect(mapStateToProps, actions)(CityDropdown);
+export default connect(mapStateToProps, mapDispatchToProps)(CityDropdown);
